@@ -1,0 +1,3 @@
+[submodule "Authentication-and-Authorization"]
+	path = Authentication-and-Authorization
+	url = https://github.com/Wayevee/Authentication-and-Authorization.git
