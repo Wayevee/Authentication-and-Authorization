@@ -1,0 +1,40 @@
+﻿@page
+@model AuthenticationandAuthorizationIdentityCore.Pages.Account.MobileMFAModel
+@{
+}
+<div class="container">
+    <div class="align-content-lg-around">
+        <h3>Step 1: </h3>
+        <p class="text-dark"> Please enter the key to your authenticator app </p>
+        <p>@Model.MobileMFA.Key</p>
+    </div>
+  
+
+    <div class="align-content-lg-around">
+        <h3>Step 2: </h3>
+        <p class="text-black">Please enetr the code from your Authenticator App</p>
+    </div>
+
+    <div class="align-content-lg-around">
+        <form method="post">
+
+            <div class="text-danger" asp-validation-summary="All"></div>
+            <div class="mb-3 row">
+                <div class="col-2">
+                    <label asp-for="MobileMFA.VerificationCode"></label>
+                </div>
+                <div class="col-5">
+                    <input type="text" asp-for="MobileMFA.VerificationCode" class="form-control" />
+                    <span class="text-danger" asp-validation-for="MobileMFA.VerificationCode"></span>
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <div class="col-2">
+                    <input type="submit" class="btn btn-primary" value="Verify" />
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</div>
